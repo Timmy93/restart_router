@@ -4,7 +4,7 @@ import re
 import time
 
 base_url = "http://192.168.99.1/setup.cgi"
-settings_file = 'settings.json'
+settings_file = '/home/pi/Documents/Secret/.router_secrets.json'
 
 
 def login(username, password):
