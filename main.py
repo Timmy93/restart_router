@@ -1,6 +1,7 @@
 import json
 import requests
 import re
+import time
 
 base_url = "http://192.168.99.1/setup.cgi"
 settings_file = 'settings.json'
@@ -73,9 +74,11 @@ if __name__ == '__main__':
     # Disconnect
     print("Disconnecting...")
     disconnect(token)
+    time.sleep(3)
     # Connect
     print("Reconnecting...")
     connect(token)
+    time.sleep(3)
     #Get new IP
     new_ip = get_IP()
     print("Old IP: " + old_ip + " -> new IP: " + new_ip)
